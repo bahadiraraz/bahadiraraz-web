@@ -27,6 +27,7 @@ function ArrowIcon() {
 }
 
 export default function Page() {
+  const [isVideoLoading, setIsVideoLoading] = useState(true); 
   const [videoProgress, setVideoProgress] = useState<number>(0);
   const [videoDuration, setVideoDuration] = useState<number>();
   const [isPaused, setIsPaused] = useState(false);
@@ -34,7 +35,18 @@ export default function Page() {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      setVideoDuration(video.duration);
+      // When the video has loaded enough data to start playing
+      const handleLoadedData = () => {
+        setIsVideoLoading(false);
+        setVideoDuration(video.duration);
+      };
+
+      video.addEventListener('loadeddata', handleLoadedData);
+
+      // Cleanup
+      return () => {
+        video.removeEventListener('loadeddata', handleLoadedData);
+      };
     }
   }, []);
   useEffect(() => {
@@ -62,19 +74,29 @@ export default function Page() {
       video.paused ? video.play() : video.pause();
     }
   };
+  const [isVideoLoading2, setIsVideoLoading2] = useState(true); 
   const [videoProgress2, setVideoProgress2] = useState<number>(0);
   const [videoDuration2, setVideoDuration2] = useState<number>();
   const [isPaused2, setIsPaused2] = useState(false);
   const videoRef2 = useRef<HTMLVideoElement>(null);
 
-  // New useEffect for the second video
   useEffect(() => {
     const video2 = videoRef2.current;
     if (video2) {
-      setVideoDuration2(video2.duration);
+      // When the video has loaded enough data to start playing
+      const handleLoadedData = () => {
+        setIsVideoLoading2(false);
+        setVideoDuration2(video2.duration);
+      };
+
+      video2.addEventListener('loadeddata', handleLoadedData);
+
+      // Cleanup
+      return () => {
+        video2.removeEventListener('loadeddata', handleLoadedData);
+      };
     }
   }, []);
-
   // New useEffect for updating progress of the second video
   useEffect(() => {
     if (isPaused2) return;
@@ -102,6 +124,7 @@ export default function Page() {
       video2.paused ? video2.play() : video2.pause();
     }
   };
+  const [isVideoLoading3, setIsVideoLoading3] = useState(true); 
   const [videoProgress3, setVideoProgress3] = useState<number>(0);
   const [videoDuration3, setVideoDuration3] = useState<number>();
   const [isPaused3, setIsPaused3] = useState(false);
@@ -109,9 +132,20 @@ export default function Page() {
 
   // New useEffect for the second video
   useEffect(() => {
-    const video3 = videoRef3.current;
+    const video2 = videoRef3.current;
     if (video3) {
-      setVideoDuration3(video3.duration);
+      // When the video has loaded enough data to start playing
+      const handleLoadedData = () => {
+        setIsVideoLoading2(false);
+        setVideoDuration2(video3.duration);
+      };
+
+      video3.addEventListener('loadeddata', handleLoadedData);
+
+      // Cleanup
+      return () => {
+        video3.removeEventListener('loadeddata', handleLoadedData);
+      };
     }
   }, []);
 
