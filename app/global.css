@@ -25,10 +25,21 @@
     --sh-string: #0fa295;
   }
 }
-
-html {
-  min-width: 360px;
+/* Üst boşluğu kaldır */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-width: 360px; /* Ekranın minimum genişliğini belirtir */
 }
+
+/* Alt boşluğu kaldır */
+.footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 
 .prose .anchor {
   @apply absolute invisible no-underline;
