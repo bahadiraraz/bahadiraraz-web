@@ -155,6 +155,7 @@ table {
   .h-40,
   .h-80 {
     height: auto;
+    display: block; 
   }
 
   .rounded-lg {
