@@ -5,6 +5,7 @@ import ice from 'public/images/image1.jpg';
 import yaz from 'public/images/yaz.jpg';
 import white from 'public/images/white.jpg';
 import code from 'public/images/office.jpg';
+import sum from 'public/images/IMG_3671.jpg';
 import Image from 'next/image';
 
 import { FaInstagram, FaLinkedin, FaGithub  } from 'react-icons/fa';
@@ -199,7 +200,7 @@ export default function Page() {
   <div className="relative h-80 mb-40 sm:mb-20">
   <Image
       alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
-      src="https://uniwave-main.s3.eu-central-1.amazonaws.com/IMG_3671.jpg"
+      src={sum}
       fill
       sizes="(max-width: 768px) 213px, 33vw"
       priority
