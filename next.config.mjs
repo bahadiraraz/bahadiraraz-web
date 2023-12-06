@@ -37,8 +37,8 @@ const ContentSecurityPolicy = `
   default-src 'self' vercel.live;
   script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.vercel-insights.com vercel.live va.vercel-scripts.com;
   style-src 'self' 'unsafe-inline';
-  img-src * blob: data: https://res.cloudinary.com;
-  media-src 'self' https://res.cloudinary.com;
+  img-src * blob: data: https://res.cloudinary.com https://uniwave-main.s3.eu-central-1.amazonaws.com;
+  media-src 'self' https://res.cloudinary.com https://uniwave-main.s3.eu-central-1.amazonaws.com;
   connect-src *;
   font-src 'self' data:;
 `;
