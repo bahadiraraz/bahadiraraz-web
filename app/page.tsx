@@ -1,6 +1,6 @@
 "use client";
-import { CldVideoPlayer } from 'next-cloudinary';
-
+import { useEffect, useRef, useState } from "react";
+import VideoPlayerControls from './components/VideoPlayerControls';
 import avatar from 'public/images/image1.jpg';
 import yaz from 'public/images/image1.jpg';
 import white from 'public/images/white.jpg';
@@ -26,22 +26,58 @@ function ArrowIcon() {
 }
 
 export default function Page() {
+  const [videoProgress, setVideoProgress] = useState<number>(0);
+  const [videoDuration, setVideoDuration] = useState<number>();
+  const [isPaused, setIsPaused] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      setVideoDuration(video.duration);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const currentTime = videoRef.current?.currentTime;
+    if (videoDuration != null && currentTime != null) {
+      let loadingTimeout = setTimeout(() => {
+        if (videoProgress === currentTime / videoDuration) {
+          setVideoProgress((prev) => prev + 0.000001);
+        } else {
+          setVideoProgress(currentTime / videoDuration);
+        }
+      }, 10);
+
+      return () => {
+        clearTimeout(loadingTimeout);
+      };
+    }
+  }, [videoProgress, videoDuration, isPaused]);
+
+  const togglePlayPause = () => {
+    const video = videoRef.current;
+    if (video) {
+      setIsPaused(!video.paused);
+      video.paused ? video.play() : video.pause();
+    }
+  };
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">Hey, I'm Bahadır 👋</h1>
-      <div className="relative h-40 mb-4 w-full overflow-hidden rounded-lg">
-           <CldVideoPlayer
-  width="1620"
-  height="1080"
-  id='1'
-  src="bdnhh6gks076f7ate7ci"
-  colors={{
-    accent: '#ff0000',
-    base: '#00ff00',
-    text: '#0000ff'
-  }}
-/>
-           </div>
+      <div className="relative w-[20%] max-w-sm mx-auto my-8 rounded-xl overflow-hidden">
+        <div className="absolute top-4 right-4 z-10">
+          <VideoPlayerControls
+            progress={videoProgress}
+            isPaused={isPaused}
+            onPlayPause={togglePlayPause}
+          />
+        </div>
+        <video className="w-full" ref={videoRef} loop muted autoPlay>
+          <source src="public/fff.mp4" />
+        </video>
+      </div>
       <p className="prose prose-neutral dark:prose-invert">
         Hello! I'm a 21-year-old software developer deeply fascinated by coding and technology. Currently, I'm pursuing my Bachelor's degree in Mathematics at Dokuz Eylul University. My journey in software development is marked by a passion for creating innovative solutions and a dedication to learning new technologies. I have a rich experience in various programming areas and thrive in collaborative environments. My goal is to make a significant impact in the tech world through my skills and creativity.
       </p>
