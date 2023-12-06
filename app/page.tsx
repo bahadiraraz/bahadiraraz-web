@@ -197,15 +197,17 @@ export default function Page() {
   </div>
 
   {/* Üst resimler */}
-  <div className="relative h-80 mb-40 sm:mb-5">
-  <Image
-      alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
-      src={sum}
-      fill
-      sizes="(max-width: 768px) 213px, 33vw"
-      priority
-      className="rounded-lg object-cover h-full"
-    />
+  <div className="relative h-80 mb-40 sm:mb-20">
+  <video className="rounded-lg object-cover w-full" ref={videoRef3} loop muted autoPlay>
+      <source src="https://uniwave-main.s3.eu-central-1.amazonaws.com/IMG_6542.mp4" type="video/mp4" />
+    </video>
+    <div className="absolute top-4 right-4 z-10">
+      <VideoPlayerControls
+        progress={videoProgress3}
+        isPaused={isPaused3}
+        onPlayPause={togglePlayPause3}
+      />
+    </div>
   </div>
 
   {/* Orta üst */}
