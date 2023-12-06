@@ -1,26 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from 'next/image';
+
+
 
 interface VideoPlayerControlsProps {
   progress: number;
+  size?: number | undefined;
+  width?: number | undefined;
   isPaused: boolean;
-  isVideoLoading: boolean; // New state to track video loading
   onPlayPause: () => void;
 }
 
 const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
   progress,
+  size = 30, // Çemberin boyutunu küçülttüm
+  width = 3,
   isPaused,
-  isVideoLoading,
   onPlayPause,
 }) => {
-  const size = 30;
-  const width = 3;
   const center = size / 2;
   const radius = center - width;
   const dashArray = 2 * Math.PI * radius;
-  const dashOffset = isVideoLoading ? dashArray : dashArray * (1 - progress); // Update based on loading state
-  const iconSize = size * 0.5;
+  const dashOffset = dashArray * (1 - progress);
+  const iconSize = size * 0.5; // Oynat/Dur butonunun boyutunu daha da küçülttüm
+
 
   return (
     <div className="relative flex justify-center items-center">
@@ -50,7 +53,7 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
           className="group cursor-pointer flex justify-center items-center"
           onClick={onPlayPause}
         >
-        <div className="fill-white group-hover:fill-[#aaaaaa] transition-colors duration-200 ease-in-out">
+        <div className=" fill-white group-hover:fill-[#aaaaaa] transition-colors duration-200 ease-in-out">
         {isPaused ? 
           <Image src="https://res.cloudinary.com/dcdbtbmfz/image/upload/v1701869923/play-svgrepo-com_n2gbvb.png" alt="Play" width={iconSize} height={iconSize} /> : 
           <Image src="https://res.cloudinary.com/dcdbtbmfz/image/upload/v1701869920/pause-svgrepo-com_klsvvx.png" alt="Pause" width={iconSize} height={iconSize} />
