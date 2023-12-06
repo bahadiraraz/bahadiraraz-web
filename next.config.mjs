@@ -1,6 +1,9 @@
 import { sql } from '@vercel/postgres';
 
 const nextConfig = {
+  images: {
+    domains: ['res.cloudinary.com'],
+  },
   experimental: {
     ppr: true,
   },
