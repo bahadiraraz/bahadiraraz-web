@@ -197,7 +197,7 @@ export default function Page() {
   </div>
 
   {/* Üst resimler */}
-  <div className="relative h-80 mb-40 sm:mb-20">
+  <div className="relative h-80 mb-40 sm:mb-5">
   <Image
       alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
       src={sum}
