@@ -75,7 +75,7 @@ export default function Page() {
           />
         </div>
         <video className="w-full" ref={videoRef} loop muted autoPlay>
-          <source src="https://res.cloudinary.com/dcdbtbmfz/video/upload/v1701819284/nhmtjmqfgoyyb4aq2np2.mp4" />
+          <source src="videos/fff.mp4" />
         </video>
       </div>
       <p className="prose prose-neutral dark:prose-invert">
