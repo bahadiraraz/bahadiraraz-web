@@ -143,7 +143,7 @@ export default function Page() {
     }
   };
   return (
-    <section>
+ <section className="main-section">
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">Hey, I'm Bahadır 👋</h1>
       <p className="prose prose-neutral dark:prose-invert">
   Hello! I'm a software developer with a deep fascination for coding and technology. My journey in the tech world is characterized by a constant pursuit of innovative solutions and a dedication to learning new technologies. I thrive in collaborative environments and am passionate about contributing to groundbreaking projects. I'm currently working at 
