@@ -34,11 +34,12 @@ const ContentSecurityPolicy = `
   default-src 'self' vercel.live;
   script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.vercel-insights.com vercel.live va.vercel-scripts.com;
   style-src 'self' 'unsafe-inline';
-  img-src * blob: data:;
+  img-src * blob: data: https://res.cloudinary.com;
   media-src 'self' https://res.cloudinary.com;
   connect-src *;
   font-src 'self' data:;
 `;
+
 
 
 const securityHeaders = [
