@@ -13,7 +13,7 @@ interface VideoPlayerControlsProps {
 
 const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
   progress,
-  size = 40, // Çemberin boyutunu küçülttüm
+  size = 30, // Çemberin boyutunu küçülttüm
   width = 3,
   isPaused,
   onPlayPause,
@@ -22,7 +22,7 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
   const radius = center - width;
   const dashArray = 2 * Math.PI * radius;
   const dashOffset = dashArray * (1 - progress);
-  const iconSize = size * 0.6; // Oynat/Dur butonunun boyutunu daha da küçülttüm
+  const iconSize = size * 0.5; // Oynat/Dur butonunun boyutunu daha da küçülttüm
 
 
   return (
@@ -33,7 +33,7 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
           cy={center}
           r={radius}
           fill="transparent"
-          stroke="#aaaaaa"
+          stroke="#777777"
           strokeWidth={width}
         />
         <circle
@@ -41,7 +41,7 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
           cy={center}
           r={radius}
           fill="transparent"
-          stroke="#ffffff"
+          stroke="#000"
           strokeWidth={width}
           strokeDasharray={dashArray}
           strokeDashoffset={dashOffset}
@@ -55,8 +55,8 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
         >
         <div className=" fill-white group-hover:fill-[#aaaaaa] transition-colors duration-200 ease-in-out">
         {isPaused ? 
-          <Image src="https://res.cloudinary.com/dcdbtbmfz/image/upload/v1701869923/play-svgrepo-com_n2gbvb.png" alt="Play" width={size} height={size} /> : 
-          <Image src="https://res.cloudinary.com/dcdbtbmfz/image/upload/v1701869920/pause-svgrepo-com_klsvvx.png" alt="Pause" width={size} height={size} />
+          <Image src="https://res.cloudinary.com/dcdbtbmfz/image/upload/v1701869923/play-svgrepo-com_n2gbvb.png" alt="Play" width={iconSize} height={iconSize} /> : 
+          <Image src="https://res.cloudinary.com/dcdbtbmfz/image/upload/v1701869920/pause-svgrepo-com_klsvvx.png" alt="Pause" width={iconSize} height={iconSize} />
         }
         </div>
         </button>
