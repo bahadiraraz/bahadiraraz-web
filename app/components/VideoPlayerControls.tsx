@@ -13,7 +13,7 @@ interface VideoPlayerControlsProps {
 
 const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
   progress,
-  size = 30, // Çemberin boyutunu küçülttüm
+  size = 30, 
   width = 3,
   isPaused,
   onPlayPause,
@@ -22,7 +22,7 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
   const radius = center - width;
   const dashArray = 2 * Math.PI * radius;
   const dashOffset = dashArray * (1 - progress);
-  const iconSize = size * 0.5; // Oynat/Dur butonunun boyutunu daha da küçülttüm
+  const iconSize = size * 0.5; 
 
 
   return (
