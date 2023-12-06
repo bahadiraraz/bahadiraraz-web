@@ -75,7 +75,7 @@ export default function Page() {
           />
         </div>
         <video className="w-full" ref={videoRef} loop muted autoPlay>
-          <source src="videos/fff.mp4" />
+          <source src="public/videos/fff.mp4" />
         </video>
       </div>
       <p className="prose prose-neutral dark:prose-invert">
