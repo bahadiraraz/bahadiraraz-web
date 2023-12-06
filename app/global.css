@@ -132,3 +132,42 @@ table {
 .title {
   text-wrap: balance;
 }
+
+@media (max-width: 768px) {
+  .main-section {
+    padding: 20px; /* Add appropriate padding or styling for smaller screens */
+  }
+
+  /* Update the column layout for smaller screens */
+  .columns-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap between items */
+  }
+
+  .columns-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap between items */
+  }
+
+  /* Add responsive styles for images and videos */
+  .h-40,
+  .h-80 {
+    height: auto;
+  }
+
+  .rounded-lg {
+    border-radius: 8px; /* Adjust the border-radius for images and videos */
+  }
+
+  .object-cover {
+    object-fit: cover; /* Adjust how images/videos are displayed */
+  }
+
+  /* Adjust VideoPlayerControls position for smaller screens */
+  .VideoPlayerControls {
+    top: auto;
+    bottom: 10px;
+  }
+}
