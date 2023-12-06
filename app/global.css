@@ -154,8 +154,8 @@ table {
   /* Add responsive styles for images and videos */
   .h-40,
   .h-80 {
-    height: auto;
-    display: block; 
+  max-width: 100%; /* Resimlerin ekran genişliğine sığmasını sağlar */
+  height: auto; /* Oranları koruyarak resimlerin boyutunu otomatik olarak ayarlar */
   }
 
   .rounded-lg {
