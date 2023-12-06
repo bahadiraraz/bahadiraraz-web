@@ -53,8 +53,8 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
         >
         <div className=" fill-white group-hover:fill-[#aaaaaa] transition-colors duration-200 ease-in-out">
         {isPaused ? 
-          <Image src="/play.svg" alt="Play" width={size} height={size} /> : 
-          <Image src="/pause.svg" alt="Pause" width={size} height={size} />
+          <Image src="public/play.svg" alt="Play" width={size} height={size} /> : 
+          <Image src="public/pause.svg" alt="Pause" width={size} height={size} />
         }
         </div>
         </button>
