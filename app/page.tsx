@@ -84,7 +84,7 @@ export default function Page() {
     onCanPlayThrough={() => console.log('Video is ready to play')} 
     onError={() => console.log('Error in video playback')}
   >
-    <source src="/videos/fff.mp4" type="video/mp4" />
+    <source src="https://res.cloudinary.com/dcdbtbmfz/video/upload/v1701819306/bdnhh6gks076f7ate7ci.mp4" type="video/mp4" />
     Sorry, your browser does not support this video.
   </video>
 </div>
