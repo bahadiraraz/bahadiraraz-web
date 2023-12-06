@@ -67,17 +67,28 @@ export default function Page() {
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">Hey, I'm Bahadır 👋</h1>
       <div className="relative w-[20%] max-w-sm mx-auto my-8 rounded-xl overflow-hidden">
-        <div className="absolute top-4 right-4 z-10">
-          <VideoPlayerControls
-            progress={videoProgress}
-            isPaused={isPaused}
-            onPlayPause={togglePlayPause}
-          />
-        </div>
-        <video className="w-full" ref={videoRef} loop muted autoPlay>
-          <source src="public/videos/fff.mp4" />
-        </video>
-      </div>
+  <div className="absolute top-4 right-4 z-10">
+    <VideoPlayerControls
+      progress={videoProgress}
+      isPaused={isPaused}
+      onPlayPause={togglePlayPause}
+    />
+  </div>
+  <video 
+    className="w-full" 
+    ref={videoRef} 
+    loop 
+    muted 
+    autoPlay 
+    aria-label="Description of the video content" 
+    onCanPlayThrough={() => console.log('Video is ready to play')} 
+    onError={() => console.log('Error in video playback')}
+  >
+    <source src="/videos/fff.mp4" type="video/mp4" />
+    Sorry, your browser does not support this video.
+  </video>
+</div>
+
       <p className="prose prose-neutral dark:prose-invert">
         Hello! I'm a 21-year-old software developer deeply fascinated by coding and technology. Currently, I'm pursuing my Bachelor's degree in Mathematics at Dokuz Eylul University. My journey in software development is marked by a passion for creating innovative solutions and a dedication to learning new technologies. I have a rich experience in various programming areas and thrive in collaborative environments. My goal is to make a significant impact in the tech world through my skills and creativity.
       </p>
