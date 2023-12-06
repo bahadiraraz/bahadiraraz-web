@@ -199,7 +199,7 @@ export default function Page() {
   {/* Üst resimler */}
   <div className="relative h-80 mb-40 sm:mb-20">
   <video className="rounded-lg object-cover w-full" ref={videoRef3} loop muted autoPlay>
-      <source src="https://uniwave-main.s3.eu-central-1.amazonaws.com/IMG_6542.mp4" type="video/mp4" />
+      <source src="https://uniwave-main.s3.eu-central-1.amazonaws.com/ddd.mp4" type="video/mp4" />
     </video>
     <div className="absolute top-4 right-4 z-10">
       <VideoPlayerControls
