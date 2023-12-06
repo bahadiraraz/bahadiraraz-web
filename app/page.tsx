@@ -132,7 +132,7 @@ export default function Page() {
 
   // New useEffect for the second video
   useEffect(() => {
-    const video2 = videoRef3.current;
+    const video3 = videoRef3.current;
     if (video3) {
       // When the video has loaded enough data to start playing
       const handleLoadedData = () => {
@@ -224,6 +224,7 @@ export default function Page() {
       <VideoPlayerControls
         progress={videoProgress}
         isPaused={isPaused}
+        isVideoLoading={isVideoLoading} // Pass the loading state
         onPlayPause={togglePlayPause}
       />
     </div>
@@ -239,6 +240,7 @@ export default function Page() {
       <VideoPlayerControls
         progress={videoProgress3}
         isPaused={isPaused3}
+        isVideoLoading={isVideoLoading3} // Pass the loading state
         onPlayPause={togglePlayPause3}
       />
     </div>
@@ -274,6 +276,7 @@ export default function Page() {
       <VideoPlayerControls
         progress={videoProgress2}
         isPaused={isPaused2}
+        isVideoLoading={isVideoLoading2} // Pass the loading state
         onPlayPause={togglePlayPause2}
       />
     </div>
