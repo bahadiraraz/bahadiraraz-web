@@ -149,7 +149,7 @@ export default function Page() {
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
         Hey, I'm Bahadır 👋
       </h1>
-      <p className="prose prose-neutral dark:prose-invert">
+      <p className=" leading-7 prose-neutral dark:prose-invert">
         Hello! I'm a software developer with a deep fascination for coding and
         technology. My journey in the tech world is characterized by a constant
         pursuit of innovative solutions and a dedication to learning new
@@ -157,7 +157,7 @@ export default function Page() {
         about contributing to groundbreaking projects. I'm currently working at
         <a
           href="https://sorsor.org/"
-          className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline ml-1 md:ml-0"
+          className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline ml-1"
         >
           <span style={{ marginRight: "5px", verticalAlign: "middle" }}>
             Sorsor
