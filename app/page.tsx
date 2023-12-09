@@ -150,11 +150,7 @@ export default function Page() {
         Hey, I'm Bahadır 👋
       </h1>
       <p className=" leading-7 prose-neutral dark:prose-invert">
-        Hello! I'm a software developer with a deep fascination for coding and
-        technology. My journey in the tech world is characterized by a constant
-        pursuit of innovative solutions and a dedication to learning new
-        technologies. I thrive in collaborative environments and am passionate
-        about contributing to groundbreaking projects. I'm currently working at
+  Hello! I'm a software developer deeply fascinated by coding and technology. My tech journey is marked by a relentless quest for innovative solutions and a commitment to learning new technologies. I excel in collaborative environments and am passionate about contributing to pioneering projects. Currently, I'm working at
         <a
           href="https://sorsor.org/"
           className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline ml-1"
