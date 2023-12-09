@@ -9,6 +9,7 @@ import sum from "public/images/IMG_3671.jpg";
 import Image from "next/image";
 
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 function ArrowIcon() {
   return (
@@ -156,7 +157,7 @@ export default function Page() {
         about contributing to groundbreaking projects. I'm currently working at
         <a
           href="https://sorsor.org/"
-          className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
+          className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline ml-1 md:ml-0"
         >
           <span style={{ marginRight: "5px", verticalAlign: "middle" }}>
             Sorsor
@@ -197,8 +198,8 @@ export default function Page() {
                 y2="773.626"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#F24F9D" />
-                <stop offset="1" stop-color="#5F4AFF" />
+                <stop stopColor="#F24F9D" />
+                <stop offset="1" stopColor="#5F4AFF" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_232_3877"
@@ -208,8 +209,8 @@ export default function Page() {
                 y2="93.7"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#F24F9D" />
-                <stop offset="1" stop-color="#5F4AFF" />
+                <stop stopColor="#F24F9D" />
+                <stop offset="1" stopColor="#5F4AFF" />
               </linearGradient>
             </defs>
           </svg>
@@ -322,33 +323,36 @@ export default function Page() {
       </div>
 
       <div className="prose prose-neutral dark:prose-invert mt-8">
-        <div className="flex justify-center">
+        <div className="flex justify-center flex-col gap-2 md:gap-3 md:flex-row">
           {/* LinkedIn Link */}
-          <a
+          <Link
             href="https://www.linkedin.com/in/bahadir-araz/"
-            className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline mx-2"
+            className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded py-1 text-sm inline-flex items-center justify-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline mx-2 md:mx-0 flex-1"
+            target="_blank"
           >
             <FaLinkedin style={{ fontSize: 20 }} />
-            <span className="ml-2">Connect with me on LinkedIn</span>
-          </a>
+            <span className="ml-2 text-xs">Connect with me on LinkedIn</span>
+          </Link>
 
           {/* Instagram Link */}
-          <a
+          <Link
             href="https://instagram.com/bahadiraraz"
-            className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline mx-2"
+            className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center justify-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline mx-2 md:mx-0 flex-1"
+            target="_blank"
           >
             <FaInstagram style={{ fontSize: 20 }} />
-            <span className="ml-2">Follow me on Instagram</span>
-          </a>
+            <span className="ml-2 text-xs">Follow me on Instagram</span>
+          </Link>
 
           {/* GitHub Link */}
-          <a
+          <Link
             href="https://github.com/bahadiraraz"
-            className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline mx-2"
+            className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center justify-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline mx-2 md:mx-0 flex-1"
+            target="_blank"
           >
             <FaGithub style={{ fontSize: 20 }} />
-            <span className="ml-2">Check out my GitHub</span>
-          </a>
+            <span className="ml-2 text-xs">Check out my GitHub</span>
+          </Link>
         </div>
       </div>
     </section>
