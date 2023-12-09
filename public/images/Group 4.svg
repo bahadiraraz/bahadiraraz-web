@@ -5,12 +5,12 @@
 <path d="M107.5 93.7C96.7 93.7 88 85 88 74.2V53.5C88 42.7 96.7 34 107.5 34C118.3 34 127 42.7 127 53.5V74.2C127.1 85 118.3 93.7 107.5 93.7Z" fill="url(#paint1_linear_232_3877)"/>
 <defs>
 <linearGradient id="paint0_linear_232_3877" x1="149.5" y1="0" x2="149.5" y2="773.626" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F24F9D"/>
-<stop offset="1" stop-color="#5F4AFF"/>
+<stop stopColor="#F24F9D"/>
+<stop offset="1" stopColor="#5F4AFF"/>
 </linearGradient>
 <linearGradient id="paint1_linear_232_3877" x1="107.5" y1="34" x2="107.5" y2="93.7" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F24F9D"/>
-<stop offset="1" stop-color="#5F4AFF"/>
+<stop stopColor="#F24F9D"/>
+<stop offset="1" stopColor="#5F4AFF"/>
 </linearGradient>
 </defs>
 </svg>
