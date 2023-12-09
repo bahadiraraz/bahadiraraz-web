@@ -220,7 +220,7 @@ export default function Page() {
 
       <div className="columns-2 sm:columns-3 gap-4 my-8">
         {/* İlk resim */}
-        <div className="relative h-40 mb-10 sm:mb-5">
+        <div className="relative h-40 hidden sm:block sm:mb-5">
           <Image
             alt="Me standing on stage at Reactathon delivering the keynote"
             src={ice}
@@ -230,7 +230,7 @@ export default function Page() {
             className="rounded-lg object-cover object-top sm:object-center h-full"
           />
         </div>
-        <div className="relative h-40 mb-40">
+        <div className="relative h-40 mb-20">
           <video
             className="rounded-lg object-cover w-full"
             ref={videoRef}
@@ -253,7 +253,7 @@ export default function Page() {
         </div>
 
         {/* Üst resimler */}
-        <div className="relative h-80 mb-40 sm:mb-20">
+        <div className="relative h-80 mb-20 sm:mb-20">
           <video
             className="rounded-lg object-cover w-full"
             ref={videoRef3}
@@ -276,7 +276,7 @@ export default function Page() {
         </div>
 
         {/* Orta üst */}
-        <div className="relative h-40 mb-40 sm:mb-20">
+        <div className="relative h-40 hidden sm:block sm:mb-20">
           <Image
             alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
             src={yaz}
@@ -286,7 +286,7 @@ export default function Page() {
             className="rounded-lg object-cover h-full"
           />
         </div>
-        <div className="relative h-40 mb-10 sm:mb-5">
+        <div className="relative h-40 hidden sm:block sm:mb-5">
           <Image
             alt="My badge on top of a pile of badges from a Vercel meetup we held"
             src={code}
@@ -297,7 +297,7 @@ export default function Page() {
           />
         </div>
         {/* Alt Video Bölümü */}
-        <div className="relative h-40 mb-40">
+        <div className="relative h-40 mb-20">
           <video
             className="rounded-lg object-cover w-full"
             ref={videoRef2}
