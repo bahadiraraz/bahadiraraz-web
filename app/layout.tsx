@@ -2,7 +2,6 @@ import './global.css';
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import { Navbar } from './components/nav';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -63,7 +62,6 @@ export default function RootLayout({
     >
       <body className="antialiased max-w-2xl mx-auto mb-1 mt-6">
         <main className="px-2 md:px-0">
-          {/* Navbar removed */}
           {children}
           <Analytics />
           <SpeedInsights />
