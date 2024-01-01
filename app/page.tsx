@@ -146,7 +146,7 @@ export default function Page() {
   };
   return (
     <section className="main-section">
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+      <h1 className="font-medium text-2xl mb-3 tracking-tighter">
         Hey, I'm Bahadır 👋
       </h1>
       <p className=" leading-7 prose-neutral dark:prose-invert">
@@ -351,7 +351,7 @@ export default function Page() {
           </Link>
         </div>
       </div>
-      <footer className="text-center p-4 mt-8 border-t border-neutral-200 dark:border-neutral-700">
+      <footer className="text-center p-4 mt-0 border-t border-neutral-200 dark:border-neutral-700">
   ©2024 Bahadır Araz. All rights reserved.
     </footer>
     </section>

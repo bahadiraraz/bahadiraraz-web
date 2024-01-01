@@ -25,22 +25,78 @@
     --sh-string: #0fa295;
   }
 }
+
 /* Üst boşluğu kaldır */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
   overflow-x: hidden;
-  min-width: 360px; /* Ekranın minimum genişliğini belirtir */
+  min-width: 360px;
 }
 
+
+
+@media (max-width: 767px) {
+  html, body {
+    overflow-y: auto; /* Mobil cihazlarda dikey kaydırma çubuğunu göster */
+  }
+}
+
+@media (min-width: 768px) {
+  html, body {
+    overflow-y: hidden; /* Tablet ve masaüstü cihazlarda dikey kaydırma çubuğunu gizle */
+  }
+}
+
+/* Yükseklik için medya sorgusu */
+@media (max-height: 930px) { /* Örnek olarak 600px yüksekliği kullanıyorum */
+  html, body {
+    overflow-y: auto; /* Belirli bir yüksekliğin altında dikey kaydırma çubuğunu göster */
+  }
+}
 /* Alt boşluğu kaldır */
 .footer {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
+html {
+    background-image:
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+78.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+43.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+62.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+74.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+21+%281%29.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+21.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+19.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+20.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+18.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+72.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+16.5.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+55.5.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+38.5.svg'),
+            url('https://uniwave-main.s3.eu-central-1.amazonaws.com/Ornament+2.svg');
+    background-repeat:
+            no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size:
+            10%, 11%, 8%, 12%, 14%, 11%, 14%, 9%, 12%, 10%, 15%, 8%, 12%, 12%, 11%;
+    background-position:
+            5% 90%,
+            10% 10%,
+            80% 20%,
+            90% 80%,
+            18% 50%,
+            75% 5%,
+            20% 90%,
+            75% 89%,
+            96% 30%,
+            15% 20%,
+            35% 70%,
+            80% 10%,
+            20% 20%,
+            80% 60%,
+            20% 90%;
+}
 
 .prose .anchor {
   @apply absolute invisible no-underline;

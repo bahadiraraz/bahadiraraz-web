@@ -56,11 +56,12 @@ export default function RootLayout({
       lang="en"
       className={cx(
         'text-black bg-white dark:text-white dark:bg-[#111010]',
+        'overflow-y: auto',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-2xl mx-auto mb-40 mt-8">
+      <body className="antialiased max-w-2xl mx-auto mb-1 mt-6">
         <main className="px-2 md:px-0">
           {/* Navbar removed */}
           {children}
@@ -71,4 +72,3 @@ export default function RootLayout({
     </html>
   );
 }
-
