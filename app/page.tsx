@@ -351,6 +351,9 @@ export default function Page() {
           </Link>
         </div>
       </div>
+      <footer className="text-center p-4 mt-8 border-t border-neutral-200 dark:border-neutral-700">
+  ©2024 Bahadır Araz. All rights reserved.
+    </footer>
     </section>
   );
 }
