@@ -69,7 +69,7 @@ export default function Page() {
   const [isPaused2, setIsPaused2] = useState(false);
   const videoRef2 = useRef<HTMLVideoElement>(null);
 
-  // New useEffect for the second video
+
   useEffect(() => {
     const video2 = videoRef2.current;
     if (video2) {
@@ -77,7 +77,7 @@ export default function Page() {
     }
   }, []);
 
-  // New useEffect for updating progress of the second video
+
   useEffect(() => {
     if (isPaused2) return;
     const currentTime2 = videoRef2.current?.currentTime;
@@ -96,7 +96,7 @@ export default function Page() {
     }
   }, [videoProgress2, videoDuration2, isPaused2]);
 
-  // New function to toggle play/pause for the second video
+
   const togglePlayPause2 = () => {
     const video2 = videoRef2.current;
     if (video2) {
@@ -109,7 +109,7 @@ export default function Page() {
   const [isPaused3, setIsPaused3] = useState(false);
   const videoRef3 = useRef<HTMLVideoElement>(null);
 
-  // New useEffect for the second video
+
   useEffect(() => {
     const video3 = videoRef3.current;
     if (video3) {
@@ -117,7 +117,7 @@ export default function Page() {
     }
   }, []);
 
-  // New useEffect for updating progress of the second video
+
   useEffect(() => {
     if (isPaused3) return;
     const currentTime3 = videoRef3.current?.currentTime;
@@ -136,7 +136,7 @@ export default function Page() {
     }
   }, [videoProgress3, videoDuration3, isPaused3]);
 
-  // New function to toggle play/pause for the second video
+
   const togglePlayPause3 = () => {
     const video3 = videoRef3.current;
     if (video3) {
@@ -248,7 +248,7 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Üst resimler */}
+
         <div className="relative h-80 mb-20 sm:mb-20">
           <video
             className="rounded-lg object-cover w-full"
@@ -271,7 +271,7 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Orta üst */}
+
         <div className="relative h-40 hidden sm:block sm:mb-20">
           <Image
             alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"

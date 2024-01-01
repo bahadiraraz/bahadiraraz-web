@@ -26,7 +26,7 @@
   }
 }
 
-/* Üst boşluğu kaldır */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -38,23 +38,22 @@ html, body {
 
 @media (max-width: 767px) {
   html, body {
-    overflow-y: auto; /* Mobil cihazlarda dikey kaydırma çubuğunu göster */
+    overflow-y: auto; 
   }
 }
 
 @media (min-width: 768px) {
   html, body {
-    overflow-y: hidden; /* Tablet ve masaüstü cihazlarda dikey kaydırma çubuğunu gizle */
+    overflow-y: hidden; 
   }
 }
 
-/* Yükseklik için medya sorgusu */
-@media (max-height: 930px) { /* Örnek olarak 600px yüksekliği kullanıyorum */
+
+@media (max-height: 930px) { 
   html, body {
-    overflow-y: auto; /* Belirli bir yüksekliğin altında dikey kaydırma çubuğunu göster */
+    overflow-y: auto; 
   }
 }
-/* Alt boşluğu kaldır */
 .footer {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -159,7 +158,6 @@ h4 {
 }
 
 .prose > :first-child {
-  /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
 }
