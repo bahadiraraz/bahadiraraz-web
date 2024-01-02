@@ -27,33 +27,17 @@
 }
 
 
+
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+    overflow-y: auto;
   min-width: 360px;
 }
 
 
 
-@media (max-width: 767px) {
-  html, body {
-    overflow-y: auto; 
-  }
-}
-
-@media (min-width: 768px) {
-  html, body {
-    overflow-y: hidden; 
-  }
-}
-
-
-@media (max-height: 930px) { 
-  html, body {
-    overflow-y: auto; 
-  }
-}
 .footer {
   margin-bottom: 0;
   padding-bottom: 0;
