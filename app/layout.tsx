@@ -54,7 +54,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-[#111010]',
+        'text-white bg-[#111010] dark:text-white dark:bg-[#111010]',
         'overflow-y: auto',
         GeistSans.variable,
         GeistMono.variable
